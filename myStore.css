@@ -1,0 +1,391 @@
+/* grid style elements */
+.grid {
+
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 8 20%;
+    grid-template-areas:
+        "head"
+        "body"
+        "contentOpen"
+        "contentwrapper"
+        "body"
+        "footer";
+}
+
+/* Common elements */
+
+
+body {
+    font-size: .75rem;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: #fff url(img/#.jpg) no-repeat fixed top center;
+    padding: 0;
+    margin: 1rem;
+    background-color: #210100;
+    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    -moz-background-size: 100%;
+}
+
+
+h1 {
+    color: #AFD4EF;
+    font-size: 2.0rem;
+    font-weight: 900;
+    text-align: center;
+    margin: .5rem 1em 5rem;
+    padding: 0em;
+    text-align: center;
+
+}
+
+h2 {
+    color: #2d373e;
+    font-size: 1.5rem;
+    padding: 0 4rem;
+    margin: 0.5em 1rem 0.3em;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0.5em 1rem 0.5em;
+    padding: 1em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #2d373e;
+    padding: 2rem;
+    margin: 0.01em 1rem 1rem;
+    font-weight: 600;
+    align-self: stretch;
+}
+
+
+
+img {
+    max-width: 15vw;
+    max-height: 22vh;
+    padding: 0;
+    position: relative;
+    margin: 0 1rem 0.1vh;
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: last baseline;
+    border-radius: 80px;
+}
+
+div ol li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: #45585d;
+}
+
+a:hover {
+    color: #AFE1EE;
+}
+
+hr {
+    padding: 0;
+    margin: .5em 1rem 5rem;
+}
+
+.contentOpen {
+    margin: 1rem;
+    max-width: auto;
+    padding: 0.3em;
+    border: 1em;
+    border-style: solid #BFE0DE;
+    background-color: transparent;
+    color: #ffff;
+    position: relative;
+}
+
+.contentWrapper {
+    margin: 1rem;
+    max-width: auto;
+    padding: 0.3em;
+    border: 1em;
+    border-style: solid #BFE0DE;
+    background-color: transparent;
+    color: #ffff;
+    position: relative;
+    display: grid;
+    grid-area: "contentwrapper";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(.5fr);
+    grid-template-areas:
+        "main sidebar "
+        "main sidebar "
+        "main sidebar "
+        "main sidebar "
+        "main sidebar "
+        "main sidebar "
+}
+
+.contentWrapper nav {
+    margin: 1rem;
+    max-width: 1170px;
+    padding: 0.3em;
+    border: 1em;
+    color: #839fb3;
+    border-style: solid #BFE0DE;
+    background-color: transparent;
+    position: relative;
+}
+
+#main {
+    
+    max-width: 99%;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: row-reverse;
+    justify-content: end;
+    grid-area: "contentWrapper";
+    grid-column: 1 / 5;
+    grid-row-end: span 7;
+
+}
+
+/* Header */
+header {
+    padding: 1em;
+    background-color: hsl(180, 65%, 81%, 70%);
+    background-image: url("https://www.transparenttextures.com/patterns/white-paperboard.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    ;
+    max-width: 5120px;
+    width: 99%;
+    height: fit-content;
+    margin: .01rem 1rem 0.01 1rem;
+}
+
+header h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5.5rem;
+    color: #000;
+    letter-spacing: -.05em;
+    margin: 4% 1rem 0 1rem;
+    text-align: center;
+
+}
+
+header h3 {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #EFB4AE;
+    margin: -1.5em 0 0 0;
+    letter-spacing: -.04em;
+    text-align: center;
+}
+
+/* Nav Bars */
+div.contentWrapper nav#helpMenu {
+    background-color: #ffff
+}
+
+header nav ul li {
+    color: #839fb3;
+    font-size: 1em;
+    letter-spacing: .02em;
+    padding: 1.0em 1.0em 0.5em;
+    margin: 0.1em 0;
+    position: absolute top 0 right 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #839fb3;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav li a,
+nav li a:visited {
+    color: #000;
+    padding: 0.3em 0.3em;
+}
+
+nav li a:hover {
+    color: #2d373e;
+    background-color: #CFD1CE;
+}
+
+nav#utilityMenu {
+    margin: 0rem 0rem 0;
+    color: #45585d;
+    font-size: 1rem;
+
+}
+
+nav#utilityMenu section {
+
+    margin: 0rem 0 0 0;
+    padding: .5%;
+    background-color: #aec7ef;
+    height: 1rem;
+    width: 96.2vw;
+    position: flex;
+    text-indent: 1rem;
+    display: list-item;
+    /* word-spacing: 2rem; */
+    list-style: none;
+    word-wrap: none;
+}
+
+nav#utilityMenu section span {
+    justify-content: flex-start;
+    text-align: justify;
+    padding: 0% 4% 0%;
+}
+
+
+nav#helpMenu {
+    display: inline-flexbox;
+    margin: 0;
+    text-align: center;
+    padding: .5em;
+    border-radius: 25px;
+    background-color: #aec7ef;
+    height: 1rem;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav#helpMenu div a {
+    background: #e0f5f5;
+    border-radius: 25%;
+}
+
+/* Main Section */
+
+/* Sidebar Section */
+.sidebar {
+    grid-column: 5 / 6;
+    grid-row-end: span 9;
+    grid-area: "sidebar";
+    border-radius: 10px;
+}
+
+div.sidebar {
+    max-width: 35vw;
+    height: 100%;
+    position: relative;
+    display: grid;
+    /*toy with this item */
+    background-color: #8c8bc1;
+    margin: 2em 0 0.5em 0em;
+    padding: .05em 0.5em 0.5em 1.75em;
+    border-left: #64648a solid 1.75em;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+}
+
+/* .drinkTypes {
+      grid-column: 1 / 5;
+    grid-row-end: span 1;
+    grid-area: "main";
+    justify-content: center;
+    border-radius: 10px;
+
+} */
+div.drinkTypes {
+    margin: 0%;
+    padding: 0 0 .5% 0;
+    background: hsl(207, 11%, 67%, 100%);
+    max-width: 100vw;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.drinkTypes ol {
+    display: flex;
+    margin: 0rem 0vw;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+
+}
+
+.drinkTypes ol li button {
+    background-color: transparent;
+    border: none;
+    padding: 0%;
+    font-size: medium;
+    color: #2d373e;
+    font-weight: bolder;
+
+}
+
+.drinkTypes ol li button:hover {
+    background-color: #AFE1EE;
+
+}
+
+.drinkTypes h1 {
+    margin: 2vh .05vw .02vh;
+    font-size: 5vh;
+
+}
+
+br {
+    position: relative;
+    padding: .5em;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0%;
+    margin-left: -1.5em;
+}
+
+footer {
+    padding: .5em;
+    background: #afeeee;
+    width: 98vw;
+    margin-top: 1%;
+    height: fit-content;
+    columns: 1/ 6;
+    grid-area: "footer";
+    display: grid;
+    grid-area: 8 / 1 / span 1 / span 7
+}
+
+footer span {
+    padding: 0 7%;
+}
+
+
+footer span a {
+    justify-content: flex-start;
+    list-style: none;
+    text-indent: 10%;
+    font-size: small;
+    margin: 3vh 2.5vw;
+    padding: .1em;
+    flex-wrap: nowrap;
+    text-align: justify;
+    z-index: 2;
+}
